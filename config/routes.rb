@@ -1,4 +1,12 @@
 RailsPracticeApp::Application.routes.draw do
+  get 'products' => 'products#index'
+  get 'products/new' => 'products#new'  
+  post 'products/create' => 'products#create'
+  get 'products/show/:id' => 'products#show'  
+  get 'products/edit/:id' => 'products#edit'
+  put 'products/:id' => 'products#update'
+  get 'products/delete/:id' => 'products#destroy'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

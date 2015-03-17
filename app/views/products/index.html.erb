@@ -1,0 +1,5 @@
+<h1>Products Products Products!!!</h1>
+
+<% @products.each do |product| %>
+<%= render partial: "display", locals: {product: product} %>
+<% end %>
