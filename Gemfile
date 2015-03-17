@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 gem 'rails', '3.2.21'
 gem 'test-unit'
-gem 'pry', :group => :development
+group :development do
+  gem 'pry'
+  gem 'pry-rails'
+end
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

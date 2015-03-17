@@ -16,6 +16,7 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to "/products/show/#{@product.id}"
     else
+      binding.pry
       render "new"
     end
   end
