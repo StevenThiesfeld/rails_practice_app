@@ -2,3 +2,55 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 */
+
+form, .product_display{
+  margin:auto;
+  width:90%;
+  padding:10px;
+}
+
+div.field_with_errors{
+  background-color:rgba(202, 44, 44, 0.63);
+  display:inline-block;
+  padding:3px;
+}
+
+a{
+  padding:8px;
+  background-color:#0D676F;
+  color:white;
+  text-decoration:none;
+  letter-spacing:2px;
+  border-radius:5px;
+  transition: .5s;
+}
+a:hover{
+  
+  background-color:#618589;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
