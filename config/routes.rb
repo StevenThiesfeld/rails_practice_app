@@ -1,7 +1,4 @@
 RailsPracticeApp::Application.routes.draw do
-  resources :reviews
-
-
   root :to =>'products#index'
   get 'products' => 'products#index'
   get 'products/new' => 'products#new'  
@@ -10,6 +7,9 @@ RailsPracticeApp::Application.routes.draw do
   get 'products/edit/:id' => 'products#edit'
   put 'products/:id' => 'products#update'
   delete 'products/delete/:id' => 'products#destroy'
+  get 'products/:id/reviews/new' => 'reviews#new'
+  post 'reviews/create' => 'reviews#create'
+  get 'reviews/:id/upvote' => 'reviews#upvote'
   #[FIXME] Hi I'm a note!
   # The priority is based upon order of creation:
   # first created -> highest priority.

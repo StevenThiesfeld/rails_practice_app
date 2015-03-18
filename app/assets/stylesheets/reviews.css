@@ -2,3 +2,18 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+.review{
+  margin:10px 0px;
+  display:inline-block;
+  background-color:#45C2BD;
+  border-radius:5px;
+}
+
+.upvote_icon{
+  padding:0;
+  height:21px;
+}
+
+.upvote_icon img{
+  width:20px;
+}

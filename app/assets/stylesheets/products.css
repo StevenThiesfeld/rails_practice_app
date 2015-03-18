@@ -16,6 +16,7 @@ div.field_with_errors{
 }
 
 a{
+  display:inline-block;
   padding:8px;
   background-color:#0D676F;
   color:white;

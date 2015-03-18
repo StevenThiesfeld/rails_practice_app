@@ -1,0 +1,5 @@
+<div class="review">
+<p><%= review.body %></p>
+<p><%= review.upvotes %> people found this review helpful <%= link_to image_tag("thumbs_up.png"), "reviews/#{review.id}/upvote", class: "upvote_icon", :remote => true %></p>
+
+</div>

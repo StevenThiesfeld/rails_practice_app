@@ -1,4 +1,5 @@
 <div class="product_display">
+  <div class = "product_info">
 <p>ID: <%= product.id %></p>
 <p>Timestamp: <%= product.created_at %></p>
 <p>Name: <%= product.name %></p>
@@ -7,5 +8,13 @@
 <%= link_to "edit", "/products/edit/#{product.id}" %>
 <%= link_to "delete", "/products/delete/#{product.id}",
 method: :delete,
- data: { confirm: 'Are you sure?' } %>
+ data: { confirm: 'Are you sure?' } %><br><br>
+ <%= link_to "Write Review", "/products/#{product.id}/reviews/new" %>
  </div>
+ 
+   <% product.reviews.each do |review|  %>
+   <div class = "reviews_display" id="review_<%=review.id %>">
+     <%= render partial: "reviews/display", locals: {review: review} %>
+   </div>
+   <% end %>
+</div>
