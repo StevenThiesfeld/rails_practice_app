@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    @products = Product.find(:all, :order => "id")
   end
   
   def show
@@ -16,7 +16,6 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to "/products/show/#{@product.id}"
     else
-      binding.pry
       render "new"
     end
   end
