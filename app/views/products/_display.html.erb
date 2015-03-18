@@ -8,13 +8,17 @@
 <%= link_to "edit", "/products/edit/#{product.id}" %>
 <%= link_to "delete", "/products/delete/#{product.id}",
 method: :delete,
- data: { confirm: 'Are you sure?' } %><br><br>
+ data: { confirm: 'Are you sure?' } %>
  <%= link_to "Write Review", "/products/#{product.id}/reviews/new" %>
  </div>
- 
+ <br>
+ <h3> Product Reviews</h3>
    <% product.reviews.each do |review|  %>
    <div class = "reviews_display" id="review_<%=review.id %>">
      <%= render partial: "reviews/display", locals: {review: review} %>
    </div>
    <% end %>
+   <% if product.reviews ==[] %>
+   <p>No Reviews</p>
+   <% end  %>
 </div>

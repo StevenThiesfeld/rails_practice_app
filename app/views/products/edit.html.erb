@@ -12,7 +12,7 @@
       </ul>
     </div>
   <% end %>
-<%= form_for @product, url: {action: 'update'} do |f| %>
+<%= form_for @product, url: "/products/#{@product.id}", method: "put" do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name %><br>
 <%= f.label :price %>
